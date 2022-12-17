@@ -1,2 +1,3 @@
 # javascript
  
+Estudos em JavaScript!
