@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(114, 119, 208);
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+
+        main {
+            position: absolute;
+            background-color:  rgb(114, 163, 208);
+            max-width: 550px;
+            min-width: 350px;
+            height: 300px;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.496);
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        main > h1 {
+            padding: 10px;
+            text-align: center;
+            text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.634);
+        }
+
+        main > p, div {
+            margin-left: 30px;
+        }
+
+        div#botao {
+            display: block;
+            width: 120px;
+            background-color: rgb(93, 110, 126);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        div#botao:hover {
+            transition-duration: .5s;
+            text-decoration: underline ;
+            background-color: rgb(112, 143, 171);
+        }
+
+        @media screen and (min-width: 768px) {
+            main {
+                height: 400px;
+                width: 650px;
+            }
+
+            div#botao {
+                text-align: center;
+                margin: auto;
+                width: 70%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Iniciando estudos com DOM</h1>
+        <p>Aqui vai o resultado...</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+        <div class="msg" id="botao" onclick="clicar()">Clique em mim</div>
+        <p id="res"></p>
+    </main>
+    <script>
+        var corpo = window.document.body // Usamos árvores do HTML para selecionar elementos no JS
+        //GetElemets Tags, ID, Class, Seletor
+        var p1 = window.document. getElementsByTagName('p')[0]
+        //window.document.write(p1.innerHTML)
+        var d = window.document.getElementById('botao')
+        d.style.background  = 'blue'
+        d.style.color = 'red'
+        //d.innerHTML = 'Olá, Mundo'
+        var s = document.querySelector('div#botao')
+        s.style.color = '#fff'
+
+        function clicar() {
+            var a = window.document.getElementById('res')
+            a.innerHTML = 'Usei DOM'
+        }
+    </script>
+</body>
+</html>

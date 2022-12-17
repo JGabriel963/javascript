@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-image: linear-gradient(to top, rgb(27, 74, 105), rgb(67, 157, 216));
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #fff;
+            width: 250px;
+            height: 255px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 7px black;
+
+            transform: translate(-50%, -50%);
+        }
+
+        main > h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: auto;
+        }
+
+
+        div input[type='number'] {
+            margin-bottom: 20px;
+            border-radius: 3px;
+            border: 1px solid black;
+            padding: 4px;
+        }
+
+        div input[type='button'] {
+            padding: 10px;
+            width: 40%;
+            border-radius: 5px;
+            border: 1px solid black;
+     
+            background-color: rgb(58, 239, 58);
+        }
+
+        div input[type='button']:hover {
+            transition-duration: .4s;
+            background-color: rgb(44, 180, 44);
+            color: #fff;
+        }
+
+        div input[type='reset'] {
+            float: right;
+            padding: 10px;
+            width: 40%;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        div input[type='reset']:hover {
+            transition-duration: .4s;
+            background-color: rgb(196, 186, 186);
+            color: #fff;
+        }
+
+        div#resposta {
+            text-align: center;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid black;
+            height: 20px;
+            padding: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somando Valores</h1>
+        <div>
+            <label for="txtn1">Número 1: </label>
+            <input type="number" name="txtn1" id="txtn1" placeholder="digite o primeiro número">
+        </div>
+        <div>
+            <label for="txtn2">Número 2: </label>
+            <input type="number" name="txtn2" id="txtn2" placeholder="digite o segundo número">
+        </div>
+        <div>
+            <input type="button" value="Somar" onclick="somar()">
+            <input type="reset" value="Limpar">
+        </div>
+        <div id="resposta">Resultado</div>
+    </main>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            resposta.innerHTML = `Resultado: ${s}`
+        }
+    </script>
+</body>
+</html>

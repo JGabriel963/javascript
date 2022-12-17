@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: lightblue;
+        }
+
+        main {
+            background-color: aliceblue;
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.627);
+        }
+
+        main > h1 {
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        div > input[type='text'] {
+            background-color: aliceblue;
+            outline: none;
+            padding: 2px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        div > input[type='button'] {
+            background-color: rgb(216, 178, 128);
+            display: block;
+            width: 80%;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        div > input[type='button']:hover {
+            background-color: rgb(225, 200, 166);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Nacionalidade</h1>
+        <div>
+            <label for="pais">Informe seu país: </label>
+            <input type="text" name="ipais" id="pais">
+        </div>
+        <div>
+            <input type="button" value="Confirmar" onclick="clicar()">
+        </div>
+        <div id="res">
+
+        </div>
+    </main>
+
+    <script>
+        function clicar() {
+            var estado = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var p = estado.value
+            res.innerHTML = `<p>Vivendo em ${p}</p>`
+            if (p == 'Brasil') {
+                res.innerHTML += '<p>Você é Brasileiro(a).</p>'
+            } else {
+                res.innerHTML += '<p>Você é Estrangeiro.</p>'
+            }
+        }
+    </script>
+</body>
+</html>

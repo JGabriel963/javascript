@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro progama...</title>
+    <style>
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            background-color: rgb(104, 104, 225);
+            color: white;
+        }
+
+        main {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-color: brown;
+            width: 300px;
+            height: 400px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.49);
+
+            transform: translate(-50%, -50%);
+        }
+
+        main h1 {
+            text-align: center;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.438);
+        }
+
+        main p#ident {
+            margin-top: 20px;
+            text-align: justify;
+            text-indent: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Olá, Mundo!</h1>
+        <p>Já me livrei da maldição</p>
+        <p id="welcome">Seja bem-vindo, </p>
+        <p id="ident">JavaScript, linguagem de progamação, normalmente associada 
+            ao cérebro das páginas Web. 
+        </p>
+    </main>
+    <script>
+        var nome = window.prompt('Qual é seu nome?') // Vai perguntar o nome...
+        n = window.document.getElementById("welcome")
+        // adicionar o nome guardado na variável "nome" a tag <p>
+        n.innerHTML += `${ nome}`
+
+    </script>
+</body>
+</html>
