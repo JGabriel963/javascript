@@ -1,6 +1,7 @@
 // criar elemento
 var el = document.createElement('div')
 
+// adicionando classe ao elemento criado
 el.classList = "div-criada";
 
 console.log(el);
