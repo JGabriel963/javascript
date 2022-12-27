@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #E65763, #34073D);
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+
+div#tasks-container {
+    width: 500px;
+    margin: auto;
+}
+
+/* task form*/
+div#tasks-header {
+    margin-top: 40px;
+}
+
+#add-task-form {
+    position: relative;
+}
+
+#add-task-form input {
+    box-sizing: border-box;
+    border: 1px solid #34073D;
+    border-radius: 10px;
+    background: #fff;
+    color: #34073D;
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+}
+
+#add-task-form input::placeholder {
+    color: #34073D;
+}
+
+#add-task-form input:focus {
+    outline: none;
+}
+
+#add-btn {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #34073D;
+    cursor: pointer;
+    transition: .5s;
+    width: 60px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#add-btn:hover {
+    background-color: #34073D;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/*taks container*/
+
+#task-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#task-list li {
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    border-bottom: 3px solid #34073D;
+    color: #34073D;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    transition: .5s;
+}
+
+li .task-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#task-list span.material-symbols-outlined {
+    position: absolute;
+    top: 0;
+    height: 40px;
+    transition: .5s;
+    cursor: pointer;
+    width: 30px;
+    padding: 5.5px;
+    line-height: 40px;
+}
+
+#done-btn {
+    text-align: center;
+    right: 40px;
+}
+
+#done-btn:hover {
+    color: #fff;
+    background-color: #09E01B;
+}
+
+#remove-btn {
+    right: 0;
+}
+
+#remove-btn:hover {
+    color: #fff;
+    background-color: #EB0927;
+}
+
+.hide {
+    display: none;
+}
+
+#task-list li.done {
+    background-color: #34073D;
+    color: #fff;
+    text-decoration: line-through;
+}
