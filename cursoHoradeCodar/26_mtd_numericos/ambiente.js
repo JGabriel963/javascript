@@ -14,8 +14,8 @@ console.log(23.28482348234.toFixed(2));
 
 // isNaN
 
-console.log(isNaN('teste')); // retorna se o valor não é um número
-console.log(isNaN(12));
+console.log(isNaN('teste')); // retorna true se o valor não é um número
+console.log(isNaN(12)); // retorna false se o valor for um número
 
 // MAX_VALUE e MIN_VALUE
 

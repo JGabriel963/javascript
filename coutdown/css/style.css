@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family= Montserrat: wght @700 & display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #f5f5f5;
+    background-image: url("../img/imagem-fundo.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.563);
+}
+
+.title {
+    font-size: calc(10px + 3vw);
+}
+
+.title p {
+    font-size: calc(10px + 1vw);
+}
+
+.countdown {
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.countdown div{
+    margin-left: 3px;
+}
+
+.countdown h1 {
+    font-size: calc(10px + 8vw);
+    text-shadow: 0 0 10px #f5f5f5;
+}
+
+.button {
+    font-weight: bold;
+    background-color: #f5f5f5;
+    color: #000;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #f5f5f5;
+}
+
+.button:hover {
+    background-color: #ff0000dc;
+    color: #f5f5f5;
+}

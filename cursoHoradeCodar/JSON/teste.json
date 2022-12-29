@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Gabriel",
+        "idade": 20,
+        "cidade": "Teresina",
+        "esta_trablhando": true,
+        "detalhes_profissao": {
+            "profissao": "Progamador",
+            "empresa": "Microsoft",
+            "Time": 1.5
+        },
+        "hobbies": ["Play the guitar", "Linsten to classic music", "Travel"]
+    }
+]
