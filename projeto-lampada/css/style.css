@@ -1,0 +1,40 @@
+header, main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+
+button {
+    font-family: monospace;
+    font-weight: bolder;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 10px;
+    box-shadow: 2px 2px 0px black;
+}
+
+button.on {
+    background-color: #039403;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 0px #034e03;
+}
+
+button.on:hover {
+    background-color: #047304;
+}
+
+button.off {
+    background-color: #ff0000;
+    color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 0px #610404;
+}
+
+button.off:hover {
+    background-color: #830404;
+}
