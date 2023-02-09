@@ -1,7 +1,7 @@
 // splice - adiconar ou remover elementos de qualquer posição
 
 var arr = [1, 2, 3, 4, 5];
-
+console.log(arr)
 arr.splice(2, 0, 999);
 console.log(arr);
 
